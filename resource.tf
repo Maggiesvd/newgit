@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "handsonterra" {
-    name     = "example-resources"
+    name     = "handsonresources"
     location = "East US"
 
 }
@@ -12,8 +12,8 @@ resource "azurerm_storage_account" "terrahandson" {
     account_replication_type = "LRS"
 }
  
-resource "azurerm_storage_container" "sacontainer" {
-    name                  = "terra-container"
+resource "azurerm_storage_container" "handsoncontainer" {
+    name                  = "container-handson"
     storage_account_name  = azurerm_storage_account.saterra.name
     container_access_type = "private"
 }
